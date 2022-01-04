@@ -12,4 +12,6 @@ function isTouching(a, b) {
 
 const avatar = document.querySelector('#player');
 
-window.addEventListener;
+window.addEventListener('keyup', function (e) {
+    console.log(e.key);
+});
