@@ -5,6 +5,7 @@ function isTouching(a, b) {
     return !(
         aRect.top + aRect.height < bReact.top ||
         aRect.top > bReact.top + bRect.height ||
-        aRect
+        aRect.left + aRect.width < bRect.width ||
+        aRect.left > bRect.left + bRect.width
     );
 }
