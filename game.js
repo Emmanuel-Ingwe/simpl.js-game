@@ -13,5 +13,14 @@ function isTouching(a, b) {
 const avatar = document.querySelector('#player');
 
 window.addEventListener('keyup', function (e) {
-    console.log(e.key);
+    if (e.key === 'ArrowDown' || e.key === 'Down') {
+        const currTop = extractPos(avatar.style.top);
+        avatar.style.top = '${currTop - 50}px';
+
+    }
 });
+
+const extraPos = (pos) => {
+    if (!pos) return 100;
+    return parseInt(pos.slice(0, -2));
+};
