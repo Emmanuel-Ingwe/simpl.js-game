@@ -17,9 +17,17 @@ window.addEventListener('keyup', function (e) {
         const currTop = extractPos(avatar.style.top);
         avatar.style.top = '${currTop - 50}px';
     }
-    else if (e.key === 'arrowUp' || e.key === 'Up') {
+    else if (e.key === 'ArrowUp' || e.key === 'Up') {
         const currleft = extractPos(avatar.style.left);
         avatar.style.top = '${currrTop - 50}px';
+    }
+    else if (e.key === 'RightArrow' || e.key === 'Up') {
+        const currleft = extractPos(avatar.style.left);
+        avatar.style.left = '${currrTop + 50}px';
+    }
+    else if (e.key === 'LeftArrow' || e.key === 'Up') {
+        const currleft = extractPos(avatar.style.left);
+        avatar.style.left = '${currrTop - 50}px';
     }
 });
 
