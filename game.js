@@ -16,7 +16,10 @@ window.addEventListener('keyup', function (e) {
     if (e.key === 'ArrowDown' || e.key === 'Down') {
         const currTop = extractPos(avatar.style.top);
         avatar.style.top = '${currTop - 50}px';
-
+    }
+    else if (e.key === 'arrowUp' || e.key === 'Up') {
+        const currleft = extractPos(avatar.style.left);
+        avatar.style.top = '${currrTop - 50}px';
     }
 });
 
