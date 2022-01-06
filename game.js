@@ -37,3 +37,10 @@ const extractPos = (pos) => {
     if (!pos) return 100;
     return parseInt(pos.slice(0, -2));
 };
+
+const moveCoin = () => {
+    const x = Math.floor(Math.random() * window.innerWidth);
+    const y = Math.floor(Math.random() * window.innerHeight);
+    confirm.style.top = `${y}px`;
+
+};
