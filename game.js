@@ -1,37 +1,39 @@
 function isTouching(a, b) {
-    const aReact = a.getBoundingClientRect();
-    const bReact = b.getBoundingClientReact();
+    const aRect = a.getBoundingClientRect();
+    const bRect = b.getBoundingClientRect();
 
     return !(
-        aRect.top + aRect.height < bReact.top ||
-        aRect.top > bReact.top + bRect.height ||
-        aRect.left + aRect.width < bRect.width ||
+        aRect.top + aRect.height < bRect.top ||
+        aRect.top > bRect.top + bRect.height ||
+        aRect.left + aRect.width < bRect.left ||
         aRect.left > bRect.left + bRect.width
     );
 }
-
+0;
 const avatar = document.querySelector('#player');
 
 window.addEventListener('keyup', function (e) {
     if (e.key === 'ArrowDown' || e.key === 'Down') {
         const currTop = extractPos(avatar.style.top);
-        avatar.style.top = '${currTop - 50}px';
+        avatar.style.top = `${currTop + 50}px`;
     }
     else if (e.key === 'ArrowUp' || e.key === 'Up') {
-        const currleft = extractPos(avatar.style.left);
-        avatar.style.top = '${currrTop - 50}px';
+        const currTop = extractPos(avatar.style.top);
+        avatar.style.top = `${currTop - 50}px`;
     }
-    else if (e.key === 'RightArrow' || e.key === 'Up') {
-        const currleft = extractPos(avatar.style.left);
-        avatar.style.left = '${currrTop + 50}px';
+    else if (e.key === 'ArrowRight' || e.key === 'Right') {
+        const currLeft = extractPos(avatar.style.left);
+        avatar.style.left = `${currLeft + 50}px`;
+        avatar.style.transform = 'scale(-1,1)';
     }
-    else if (e.key === 'LeftArrow' || e.key === 'Up') {
-        const currleft = extractPos(avatar.style.left);
-        avatar.style.left = '${currrTop - 50}px';
+    else if (e.key === 'ArrowLeft' || e.key === 'Left') {
+        const currLeft = extractPos(avatar.style.left);
+        avatar.style.left = `${currLeft - 50}px`;
+        avatar.style.trans;
     }
 });
 
-const extraPos = (pos) => {
+const extractPos = (pos) => {
     if (!pos) return 100;
     return parseInt(pos.slice(0, -2));
 };
