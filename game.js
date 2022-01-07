@@ -24,12 +24,12 @@ window.addEventListener('keyup', function (e) {
     else if (e.key === 'ArrowRight' || e.key === 'Right') {
         const currLeft = extractPos(avatar.style.left);
         avatar.style.left = `${currLeft + 50}px`;
-        avatar.style.transform = 'scale(-1,1)';
+        avatar.style.transform = 'scale(1,1)';
     }
     else if (e.key === 'ArrowLeft' || e.key === 'Left') {
         const currLeft = extractPos(avatar.style.left);
         avatar.style.left = `${currLeft - 50}px`;
-        avatar.style.trans;
+        avatar.style.transform = 'scale(-1,1)';
     }
 });
 
@@ -41,6 +41,6 @@ const extractPos = (pos) => {
 const moveCoin = () => {
     const x = Math.floor(Math.random() * window.innerWidth);
     const y = Math.floor(Math.random() * window.innerHeight);
-    confirm.style.top = `${y}px`;
-
+    coin.style.top = `${y}px`;
+    coin.style, left = `${x}px`;
 };
